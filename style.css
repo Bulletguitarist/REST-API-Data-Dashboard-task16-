@@ -1,0 +1,171 @@
+/* =========================
+   GLOBAL RESET
+   ========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    color: #263238;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+    padding: 30px;
+    text-align: center;
+    color: white;
+
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+header h1 {
+    letter-spacing: 1px;
+}
+
+/* =========================
+   CONTROLS SECTION
+   ========================= */
+.controls {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.controls input,
+.controls select {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    min-width: 200px;
+
+    transition: 0.3s;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.2);
+}
+
+/* =========================
+   GRID LAYOUT
+   ========================= */
+.grid {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* =========================
+   CARD DESIGN
+   ========================= */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #1a237e;
+}
+
+.card p {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   PAGINATION
+   ========================= */
+.pagination {
+    text-align: center;
+    margin: 40px 0;
+}
+
+button {
+    padding: 10px 18px;
+    border-radius: 25px;
+    border: none;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+
+    cursor: pointer;
+    margin: 0 10px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+#pageInfo {
+    font-weight: bold;
+    color: white;
+}
+
+/* =========================
+   ERROR MESSAGE
+   ========================= */
+.error {
+    text-align: center;
+    color: #ffebee;
+    background: #c62828;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls input,
+    .controls select {
+        width: 100%;
+        max-width: 300px;
+    }
+}
